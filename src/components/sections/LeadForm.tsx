@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { User, Phone, Stethoscope, CalendarDays, CheckCircle2, ArrowRight, ArrowLeft } from "lucide-react";
 import Container from "@/components/ui/Container";
@@ -35,6 +35,11 @@ export default function LeadForm() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const validateStep = () => {
     const newErrors: Record<string, string> = {};
@@ -166,6 +171,7 @@ export default function LeadForm() {
                       }
                       placeholder="Enter your full name"
                       className="w-full px-5 py-4 rounded-2xl border border-border bg-white/50 text-foreground placeholder:text-muted-light focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-base"
+                      suppressHydrationWarning
                     />
                     {errors.name && (
                       <p className="text-emergency text-sm mt-2">{errors.name}</p>
@@ -193,6 +199,7 @@ export default function LeadForm() {
                         }
                         placeholder="10-digit phone number"
                         className="w-full px-5 py-4 rounded-2xl border border-border bg-white/50 text-foreground placeholder:text-muted-light focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-base"
+                        suppressHydrationWarning
                       />
                     </div>
                     {errors.phone && (
@@ -242,7 +249,7 @@ export default function LeadForm() {
                       onChange={(e) =>
                         setFormData({ ...formData, date: e.target.value })
                       }
-                      min={new Date().toISOString().split("T")[0]}
+                      min={mounted ? new Date().toISOString().split("T")[0] : ""}
                       className="w-full px-5 py-4 rounded-2xl border border-border bg-white/50 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all text-base"
                     />
                     {errors.date && (

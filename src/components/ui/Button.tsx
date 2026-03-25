@@ -59,7 +59,7 @@ export default function Button({
   }
 
   return (
-    <button className={classes} {...props}>
+    <button className={classes} {...props} suppressHydrationWarning>
       {icon && <span className="flex-shrink-0">{icon}</span>}
       {children}
     </button>

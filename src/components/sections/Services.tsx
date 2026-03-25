@@ -14,38 +14,44 @@ import ServiceCard from "@/components/ui/ServiceCard";
 
 const services = [
   {
-    icon: <ScanLine size={28} />,
+    icon: <ScanLine size={20} />,
     title: "Invisalign & Braces",
+    image: "/images/services/invisalign.png",
     description:
       "Straighten your teeth discreetly with clear aligners or traditional braces. Customized treatment plans for every smile.",
   },
   {
-    icon: <HeartPulse size={28} />,
+    icon: <HeartPulse size={20} />,
     title: "Root Canal Treatment",
+    image: "/images/services/root-canal.png",
     description:
       "Pain-free endodontic procedures using advanced rotary technology. Save your natural teeth with expert precision.",
   },
   {
-    icon: <Stethoscope size={28} />,
+    icon: <Stethoscope size={20} />,
     title: "Dental Implants",
+    image: "/images/services/dental-implants.png",
     description:
       "Permanent, natural-looking tooth replacements with titanium implants. Restore your bite and confidence.",
   },
   {
-    icon: <Sparkles size={28} />,
+    icon: <Sparkles size={20} />,
     title: "Teeth Whitening",
+    image: "/images/services/teeth-whitening.png",
     description:
       "Professional in-office whitening for a brighter, radiant smile. See results in just one visit.",
   },
   {
-    icon: <Smile size={28} />,
+    icon: <Smile size={20} />,
     title: "Smile Makeover",
+    image: "/images/services/smile-makeover.png",
     description:
       "Complete smile transformation combining veneers, bonding, and contouring. Design your dream smile.",
   },
   {
-    icon: <Zap size={28} />,
+    icon: <Zap size={20} />,
     title: "Laser Dentistry",
+    image: "/images/services/laser-dentistry.png",
     description:
       "Minimally invasive laser treatments for gum disease, fillings, and more. Faster healing, less discomfort.",
   },
@@ -70,6 +76,7 @@ export default function Services() {
               icon={service.icon}
               title={service.title}
               description={service.description}
+              image={service.image}
               index={i}
             />
           ))}
