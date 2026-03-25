@@ -2,10 +2,10 @@ import { NextResponse } from "next/server";
 import dbConnect from "@/lib/mongodb";
 import Lead from "@/models/Lead";
 
-export async function PATCH(req: Request, { params }: { params: { id: string } }) {
+export async function PATCH(req: Request, { params }: { params: Promise<{ id: string }> }) {
   try {
     const { status } = await req.json();
-    const { id } = params;
+    const { id } = await params;
     
     await dbConnect();
     const lead = await Lead.findByIdAndUpdate(id, { status }, { new: true });
