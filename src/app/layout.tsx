@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Poppins, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import ChatWidget from "@/components/chatbot/ChatWidget";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -56,6 +57,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
         {children}
+        <ChatWidget />
       </body>
     </html>
   );
