@@ -24,23 +24,22 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "DentaCare Premium | Best Dentist in Your City",
+  title: "Dr. Navneet Agrawal | Pediatric Dentist in Indore | Agrawal Dental Care",
   description:
-    "Advanced, pain-free dental treatments with world-class care. Transform your smile with our expert dental team. Serving patients with 15+ years of experience.",
+    "Expert pediatric dental care in Indore by Dr. Navneet Agrawal. Specializing in child dentistry, painless treatments, and smile transformations at Agrawal Dental Care Indore.",
   keywords: [
-    "best dentist",
-    "dental clinic",
-    "teeth whitening",
-    "dental implants",
-    "root canal treatment",
-    "smile makeover",
-    "invisalign",
-    "braces",
+    "Pediatric Dentist Indore",
+    "Pedodontist Indore",
+    "Child Dentist Indore",
+    "Agrawal Dental Care Indore",
+    "Dr. Navneet Agrawal",
+    "Best Kids Dentist Indore",
+    "Painless Dental Treatment Indore",
   ],
   openGraph: {
-    title: "DentaCare Premium | Transform Your Smile",
+    title: "Dr. Navneet Agrawal | Best Pediatric Dentist in Indore",
     description:
-      "Advanced, pain-free dental treatments with world-class care.",
+      "Transform your child's smile with expert care at Agrawal Dental Care Indore by Dr. Navneet Agrawal.",
     type: "website",
   },
 };

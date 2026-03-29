@@ -51,10 +51,10 @@ export default function Navbar() {
             {/* Logo */}
             <a href="#home" className="flex items-center gap-2 group">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <span className="text-white font-bold text-lg">D</span>
+                <span className="text-white font-bold text-lg">A</span>
               </div>
               <span className="text-xl font-bold font-[family-name:var(--font-poppins)] text-foreground">
-                Denta<span className="text-primary">Care</span>
+                Agrawal<span className="text-primary">Dental</span>
               </span>
             </a>
 
@@ -74,11 +74,11 @@ export default function Navbar() {
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-3">
               <a
-                href="tel:+911234567890"
+                href="tel:+919977451132"
                 className="flex items-center gap-2 text-muted hover:text-foreground transition-colors text-sm font-medium"
               >
                 <Phone size={16} />
-                <span>+91 12345 67890</span>
+                <span>+91 99774 51132</span>
               </a>
               <Button href="#appointment" size="sm">
                 Book Appointment
@@ -118,7 +118,7 @@ export default function Navbar() {
             >
               <div className="flex items-center justify-between p-5 border-b border-border">
                 <span className="text-lg font-bold font-[family-name:var(--font-poppins)] text-foreground">
-                  Denta<span className="text-primary">Care</span>
+                  Agrawal<span className="text-primary">Dental</span>
                 </span>
                 <button
                   onClick={() => setMobileOpen(false)}
@@ -147,7 +147,7 @@ export default function Navbar() {
                     Book Appointment
                   </Button>
                   <Button
-                    href="tel:+911234567890"
+                    href="tel:+919977451132"
                     variant="outline"
                     className="w-full"
                     icon={<Phone size={16} />}

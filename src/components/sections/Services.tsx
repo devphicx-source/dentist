@@ -14,46 +14,46 @@ import ServiceCard from "@/components/ui/ServiceCard";
 
 const services = [
   {
-    icon: <ScanLine size={20} />,
-    title: "Invisalign & Braces",
-    image: "/images/services/invisalign.png",
+    icon: <Smile size={20} />,
+    title: "Infant Oral Health",
+    image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800",
     description:
-      "Straighten your teeth discreetly with clear aligners or traditional braces. Customized treatment plans for every smile.",
-  },
-  {
-    icon: <HeartPulse size={20} />,
-    title: "Root Canal Treatment",
-    image: "/images/services/root-canal.png",
-    description:
-      "Pain-free endodontic procedures using advanced rotary technology. Save your natural teeth with expert precision.",
-  },
-  {
-    icon: <Stethoscope size={20} />,
-    title: "Dental Implants",
-    image: "/images/services/dental-implants.png",
-    description:
-      "Permanent, natural-looking tooth replacements with titanium implants. Restore your bite and confidence.",
+      "Comprehensive dental exams for infants and toddlers including risk assessment for caries in mother and child.",
   },
   {
     icon: <Sparkles size={20} />,
-    title: "Teeth Whitening",
-    image: "/images/services/teeth-whitening.png",
+    title: "Preventive Care",
+    image: "https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&q=80&w=800",
     description:
-      "Professional in-office whitening for a brighter, radiant smile. See results in just one visit.",
+      "Professional cleaning, fluoride treatments, and dental sealants to protect your child's teeth from decay.",
   },
   {
-    icon: <Smile size={20} />,
-    title: "Smile Makeover",
-    image: "/images/services/smile-makeover.png",
+    icon: <Stethoscope size={20} />,
+    title: "Cavity Treatment",
+    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800",
     description:
-      "Complete smile transformation combining veneers, bonding, and contouring. Design your dream smile.",
+      "Gentle cavity fillings and restorative treatments designed specifically for primary (baby) and permanent teeth.",
+  },
+  {
+    icon: <ScanLine size={20} />,
+    title: "Braces & Aligners",
+    image: "https://images.unsplash.com/photo-1594142404563-64cccaf5a10f?auto=format&fit=crop&q=80&w=800",
+    description:
+      "Professional assessment and treatment for straightening teeth and correcting improper bites in children.",
+  },
+  {
+    icon: <HeartPulse size={20} />,
+    title: "Habit Counseling",
+    image: "https://plus.unsplash.com/premium_photo-1668613402936-98ce515c5cc5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y291bnNlbGluZ3xlbnwwfHwwfHx8MA%3D%3D?auto=format&fit=crop&q=80&w=800",
+    description:
+      "Expert guidance for breaking habits like thumb sucking and pacifier use that can affect dental development.",
   },
   {
     icon: <Zap size={20} />,
-    title: "Laser Dentistry",
-    image: "/images/services/laser-dentistry.png",
+    title: "Emergency Care",
+    image: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=800",
     description:
-      "Minimally invasive laser treatments for gum disease, fillings, and more. Faster healing, less discomfort.",
+      "Rapid care for dental emergencies such as fractured, displaced, or knocked-out teeth to ensure quick recovery.",
   },
 ];
 

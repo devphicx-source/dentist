@@ -41,10 +41,10 @@ export default function Hero() {
             >
               Transform Your{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-                Smile.
+                Child&apos;s Smile.
               </span>
               <br />
-              Restore Your{" "}
+              Build Lasting{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary to-primary">
                 Confidence.
               </span>
@@ -56,8 +56,8 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
               className="mt-6 text-lg text-muted leading-relaxed max-w-lg"
             >
-              Advanced, pain-free dental treatments with world-class care. Your
-              journey to the perfect smile begins here.
+              Indore&apos;s trusted pediatric dentist providing gentle, pain-free 
+              dental care for infants, children, and teens at Agrawal Dental Care.
             </motion.p>
 
             <motion.div
@@ -74,7 +74,7 @@ export default function Hero() {
                 Book Appointment
               </Button>
               <Button
-                href="https://wa.me/911234567890"
+                href="https://wa.me/919977451132"
                 variant="outline"
                 size="lg"
                 icon={<MessageCircle size={20} />}
@@ -102,7 +102,7 @@ export default function Hero() {
                   ))}
                 </div>
                 <span>
-                  <strong className="text-foreground">4.9★</strong> from 500+ reviews
+                  <strong className="text-foreground">4.9★</strong> from 47 reviews
                 </span>
               </div>
             </motion.div>

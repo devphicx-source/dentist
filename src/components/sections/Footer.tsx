@@ -28,15 +28,15 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <span className="text-white font-bold text-lg">D</span>
+                <span className="text-white font-bold text-lg">A</span>
               </div>
               <span className="text-xl font-bold font-[family-name:var(--font-poppins)]">
-                Denta<span className="text-primary-light">Care</span>
+                Agrawal<span className="text-primary-light">Dental</span>
               </span>
             </div>
             <p className="text-white/60 text-sm leading-relaxed max-w-xs">
-              Advanced dental care with a gentle touch. Your trusted partner for
-              a healthier, more confident smile.
+              Expert pediatric dental care with a gentle touch. Your trusted 
+              partner for your child&apos;s healthy and confident smile in Indore.
             </p>
             {/* Social Icons */}
             <div className="flex items-center gap-3 mt-5">
@@ -97,10 +97,10 @@ export default function Footer() {
               Contact
             </h4>
             <div className="space-y-3 text-sm text-white/60">
-              <p>123, MG Road, Indiranagar</p>
-              <p>Bengaluru, Karnataka 560038</p>
-              <p className="text-white/80 font-medium">+91 12345 67890</p>
-              <p>hello@dentacare.in</p>
+              <p>MZ1, Onam Plaza, AB Rd</p>
+              <p>New Palasia, Indore, MP 452001</p>
+              <p className="text-white/80 font-medium">+91 99774 51132</p>
+              <p>info@agrawaldentalcare.com</p>
             </div>
           </div>
         </div>
@@ -108,7 +108,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-sm">
-            © {new Date().getFullYear()} DentaCare. All rights reserved.
+            © {new Date().getFullYear()} Agrawal Dental Care. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-white/40">
             <a href="#" className="hover:text-white/70 transition-colors">

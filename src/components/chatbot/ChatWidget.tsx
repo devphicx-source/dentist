@@ -10,13 +10,18 @@ import GreetingBubble from "./GreetingBubble";
 interface Message {
   role: "user" | "bot";
   content: string;
+  intent?: "normal" | "appointment" | "urgent" | "problem";
 }
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
   const [showGreeting, setShowGreeting] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: "bot", content: "Hello! I'm your Dental Assistant. How can I help you today? 👋" },
+    { 
+      role: "bot", 
+      content: "Hello! I'm Dr. Agrawal's Assistant. How can I help your child's smile today? 👋",
+      intent: "normal"
+    },
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -103,16 +108,20 @@ export default function ChatWidget() {
       });
 
       const data = await response.json();
-      setMessages((prev) => [...prev, { role: "bot", content: data.message }]);
+      setMessages((prev) => [...prev, { role: "bot", content: data.message, intent: data.intent }]);
 
       if (data.intent === "appointment") {
-        setMessages((prev) => [...prev, { role: "bot", content: "I can help you book that. May I know your full name?" }]);
+        setMessages((prev) => [...prev, { 
+          role: "bot", 
+          content: "I can help you book that right here. May I know your full name?",
+          intent: "appointment" 
+        }]);
         setStage("booking_name");
         setUserData({ ...userData, problem: userMessage });
       }
 
-      if (data.intent === "urgent") {
-        setMessages((prev) => [...prev, { role: "bot", content: "This sounds serious. Please call us immediately or WhatsApp us for faster response:" }]);
+      if (data.intent === "urgent" || data.intent === "problem") {
+        // No additional messages needed, the intent will trigger the buttons in the UI
       }
 
     } catch (error) {
@@ -147,16 +156,16 @@ export default function ChatWidget() {
                   <BotAvatar isOpen={true} size="w-10 h-10" />
                 </div>
                 <div>
-                  <h3 className="font-bold text-lg">Dental Assistant</h3>
+                  <h3 className="font-bold text-lg">Dr. Agrawal&apos;s Assistant</h3>
                   <div className="flex items-center gap-1.5 text-xs text-secondary-light">
                     <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-                    Online
+                    Available Now
                   </div>
                 </div>
               </div>
               <div className="flex items-center gap-1">
                 <a 
-                  href="tel:+919876543210" 
+                  href="tel:+919977451132" 
                   className="p-2 hover:bg-white/10 rounded-xl transition-colors"
                   title="Call Us"
                 >
@@ -183,14 +192,29 @@ export default function ChatWidget() {
                   }`}>
                     {m.content}
                     
-                    {/* Urgency Buttons */}
-                    {m.content.includes("call us immediately") && (
+                    {/* Urgency & Problem Buttons */}
+                    {(m.intent === "urgent" || m.intent === "problem" || m.intent === "appointment") && m.role === "bot" && (
                       <div className="mt-4 flex flex-col gap-2">
-                        <a href="tel:+919876543210" className="flex items-center justify-center gap-2 bg-emergency text-white py-2.5 rounded-xl font-semibold hover:bg-emergency-dark transition-colors">
-                          <Phone size={16} /> Call Now
+                        <a href="tel:+919977451132" className="flex items-center justify-center gap-2 bg-primary text-white py-2.5 rounded-xl font-semibold hover:bg-primary-dark transition-colors shadow-sm">
+                          <Phone size={16} /> Call Clinic
                         </a>
-                        <a href="https://wa.me/919876543210" className="flex items-center justify-center gap-2 bg-green-500 text-white py-2.5 rounded-xl font-semibold hover:bg-green-600 transition-colors">
-                          <MessageSquare size={16} /> WhatsApp
+                        <button 
+                          onClick={() => {
+                            if (stage === "chat") {
+                              setMessages(prev => [...prev, { 
+                                role: "bot", 
+                                content: "Sure, let's get you scheduled. May I know your full name?",
+                                intent: "appointment"
+                              }]);
+                              setStage("booking_name");
+                            }
+                          }}
+                          className="flex items-center justify-center gap-2 bg-secondary text-white py-2.5 rounded-xl font-semibold hover:bg-secondary-dark transition-colors shadow-sm"
+                        >
+                          <Calendar size={16} /> Book Appointment
+                        </button>
+                        <a href="https://wa.me/919977451132" className="flex items-center justify-center gap-2 bg-green-500 text-white py-2.5 rounded-xl font-semibold hover:bg-green-600 transition-colors shadow-sm">
+                          <MessageSquare size={16} /> WhatsApp Us
                         </a>
                       </div>
                     )}

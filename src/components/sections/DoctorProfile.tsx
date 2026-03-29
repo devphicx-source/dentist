@@ -6,10 +6,10 @@ import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 const certifications = [
-  { icon: <GraduationCap size={18} />, text: "BDS, MDS — Prosthodontics" },
-  { icon: <Award size={18} />, text: "Fellow, International Congress of Oral Implantologists" },
-  { icon: <BadgeCheck size={18} />, text: "Member, Indian Dental Association" },
-  { icon: <Award size={18} />, text: "Advanced Training — Germany & USA" },
+  { icon: <GraduationCap size={18} />, text: "BDS, MDS — Pediatric & Preventive Dentistry" },
+  { icon: <Award size={18} />, text: "Specialist Pediatric Dentist & Pedodontist" },
+  { icon: <BadgeCheck size={18} />, text: "Expert in Child Dental Care & Behavior Management" },
+  { icon: <Award size={18} />, text: "Advanced Pediatric Treatments — Indore" },
 ];
 
 export default function DoctorProfile() {
@@ -35,11 +35,13 @@ export default function DoctorProfile() {
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl aspect-[3/4]">
               <img
-                src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=600&q=80"
-                alt="Dr. Rajesh Kumar - Lead Dentist"
-                className="w-full h-full object-cover"
+                src="/images/doctor.png"
+                alt="Dr. Navneet Agrawal"
+                className="w-full h-full object-cover rounded-3xl"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80';
+                }}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
             </div>
             {/* Experience Badge */}
             <motion.div
@@ -69,23 +71,23 @@ export default function DoctorProfile() {
             </div>
 
             <h3 className="text-3xl lg:text-4xl font-bold font-[family-name:var(--font-playfair)] text-foreground mb-2">
-              Dr. Rajesh Kumar
+              Dr. Navneet Agrawal
             </h3>
             <p className="text-muted font-medium mb-6">
-              BDS, MDS (Prosthodontics & Implantology)
+              BDS, MDS (Pediatric & Preventive Dentistry)
             </p>
 
             <p className="text-muted leading-relaxed mb-6">
-              With over 15 years of clinical experience, Dr. Kumar is a pioneer
-              in advanced implantology and cosmetic dentistry. He has
-              successfully treated over 5,000 patients and is known for his
-              gentle approach and commitment to pain-free dental care.
+              Dr. Navneet Agrawal is a highly skilled and compassionate pediatric
+              dentist at Agrawal Dental Care Indore. With a focus on gentle and
+              patient-friendly treatments, he ensures that every child has a
+              positive and stress-free dental experience.
             </p>
             <p className="text-muted leading-relaxed mb-8">
-              Having trained at premier institutions in Germany and the United
-              States, Dr. Kumar brings world-class expertise to every procedure.
-              His philosophy is simple — every patient deserves a confident,
-              beautiful smile.
+              Known for his polite nature and expertise, Dr. Agrawal is dedicated
+              to providing the best oral health care for kids in Indore. His 
+              philosophy is simple — every child deserves a healthy, happy smile 
+              without any fear of the dentist.
             </p>
 
             {/* Certifications */}

@@ -9,22 +9,22 @@ const contactInfo = [
   {
     icon: <MapPin size={22} />,
     title: "Visit Us",
-    lines: ["123, MG Road, Indiranagar", "Bengaluru, Karnataka 560038"],
+    lines: ["MZ1, Onam Plaza, AB Rd, Near Industry House", "New Palasia, Indore, MP 452001"],
   },
   {
     icon: <Phone size={22} />,
     title: "Call Us",
-    lines: ["+91 12345 67890", "+91 98765 43210"],
+    lines: ["+91 99774 51132", "0731-1234567"],
   },
   {
     icon: <Mail size={22} />,
     title: "Email Us",
-    lines: ["hello@dentacare.in", "appointments@dentacare.in"],
+    lines: ["info@agrawaldentalcare.com", "appointments@agrawaldentalcare.com"],
   },
   {
     icon: <Clock size={22} />,
     title: "Working Hours",
-    lines: ["Mon – Sat: 9:00 AM – 8:00 PM", "Sunday: 10:00 AM – 2:00 PM"],
+    lines: ["Mon – Sat: 11:00 AM – 8:00 PM", "Sunday: Closed"],
   },
 ];
 

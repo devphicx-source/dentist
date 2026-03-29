@@ -6,39 +6,27 @@ import TestimonialCard from "@/components/ui/TestimonialCard";
 
 const testimonials = [
   {
-    name: "Priya Sharma",
+    name: "Dr. Sonali Choudhary",
     review:
-      "I was terrified of dental treatments, but Dr. Kumar made me feel completely at ease. My smile makeover turned out absolutely beautiful. Highly recommend!",
+      "I had a wonderful experience with Dr. Navneet Agrawal. He is not only highly skilled and professional but also very polite and patient-friendly. The clinic is excellent and highly recommended.",
     rating: 5,
   },
   {
-    name: "Amit Patel",
+    name: "Pushpendra Singh",
     review:
-      "Got dental implants done here and the results are incredible. The whole process was painless and the staff was extremely professional. Best clinic in the city!",
+      "I recently had the pleasure of visiting Dr. Navneet Agrawal for dental care, and I must say, it was an exceptional experience. Dr. Agrawal is not only highly skilled and knowledgeable but also incredibly patient and understanding.",
     rating: 5,
   },
   {
-    name: "Sneha Reddy",
+    name: "Ranu Jain",
     review:
-      "The teeth whitening procedure took only 45 minutes and the results were amazing! My teeth are several shades brighter. The clinic is so clean and modern.",
+      "Exceptional Dental Care for Kids! I had a wonderful experience at Dr. Navneet Agrawal's clinic for my 6-year-old. The staff was courteous and efficient, making the entire process seamless.",
     rating: 5,
   },
   {
-    name: "Rahul Verma",
+    name: "Patient Feedback",
     review:
-      "Had a root canal done without any pain whatsoever. Dr. Kumar's expertise is unmatched. The advanced equipment they use really makes a difference.",
-    rating: 5,
-  },
-  {
-    name: "Meera Joshi",
-    review:
-      "My Invisalign journey has been smooth and comfortable. The team tracks my progress carefully and the results are already showing. Love this place!",
-    rating: 4,
-  },
-  {
-    name: "Vikram Singh",
-    review:
-      "From emergency treatment to regular checkups, DentaCare has been our family's go-to clinic for 3 years. The quality of care is consistently excellent.",
+      "Nice behavior with excellent work. Will provide the desired result at the end of your treatment. Thanks doctors for the exceptional care.",
     rating: 5,
   },
 ];

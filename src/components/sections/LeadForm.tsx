@@ -8,13 +8,13 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 
 const services = [
-  "Invisalign / Braces",
-  "Root Canal Treatment",
-  "Dental Implants",
-  "Teeth Whitening",
-  "Smile Makeover",
-  "Laser Dentistry",
-  "General Checkup",
+  "Kids Dental Checkup",
+  "Cavity Fillings",
+  "Fluoride Treatment",
+  "Dental Sealants",
+  "Braces for Children",
+  "Tongue Tie Treatment",
+  "Dental Emergencies",
   "Other",
 ];
 
